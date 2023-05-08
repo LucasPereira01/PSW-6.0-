@@ -1,41 +1,24 @@
-{% extends "bases/base_evento.html" %}
-{% load static %}
+{% extends "bases/base_evento.html" %} {% load static %} {% block 'conteudo' %}
 
 
-{% block 'conteudo' %}
-
-
-
-{% endblock %}
-{% block 'body' %}
+{% endblock %} {% block 'body' %}
 <div class="container">
-    <div class="logo">
-        <h1 class="logo text-center ">Seja Bem vindo ao Type.Event</h1>
-       <h6 class="logo text-center">Seu serviço de cadastro de Eventos</h6> 
-    </div>
+  <div class="logo">
+    <h1 class="logo text-center">Seja Bem vindo ao Type.Event</h1>
+    <h6 class="logo text-center">Seu serviço de cadastro de Eventos</h6>
+  </div>
 </div>
 
-    <div class="container-fluid bg-inscricao">
-        
-        <div class="row">
-            <div class="col-md">
-                {% include 'partials/usuarios/login.html' %}
+<div class="container-fluid bg-inscricao">
+  <div class="row">
+    <div class="col-md">
+      {% include 'partials/usuarios/login.html' %}
 
-                <img src="{% static 'geral/img/logo_evento.png' %}" class="logo-evento">
-
-            </div>
-            
-            <div class="col-md bg-img">
-            
-            </div>
-        
-        </div>
+      <img src="{% static 'geral/img/logo_evento.png' %}" class="logo-evento" />
     </div>
 
+    <div class="col-md bg-img"></div>
+  </div>
+</div>
+
 {% endblock %}
-
-
-
-
-
-
