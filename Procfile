@@ -1,1 +1,1 @@
-web: python manage.py migrate && gunicorn myAplyLucam.wsgi
+web: gunicorn myAplyLucam.wsgi --log-file -
