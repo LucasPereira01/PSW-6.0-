@@ -1,1 +1,1 @@
-web: python manage.py migrate && gunicorn myAplyLucam.wsgi
+python manage.py migrate && gunicorn myAplyLucam.wsgi
