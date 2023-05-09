@@ -1,1 +1,1 @@
-web: gunicorn myAplyLucam.wsgi --log-file -
+web: gunicorn type_event.wsgi --log-file -
