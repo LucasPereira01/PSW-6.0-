@@ -1,1 +1,1 @@
-web: python manage.py migrate && gunicorn type_event.wsgi
+web: gunicorn 'type_event.wsgi'
