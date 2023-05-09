@@ -34,12 +34,17 @@ CSRF_TRUSTED_ORIGINS = ['https://myaplylucarm-production.up.railway.app','https:
 # Application definition
 
 INSTALLED_APPS = [
+     
+]
+
+INSTALLED_APPS = [
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    'whitenoise.runserver_nostatic',   
     'usuarios',
     'eventos',
     'cliente',
@@ -54,6 +59,7 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
+    "whitenoise.middleware.WhiteNoiseMiddleware",
 ]
 
 ROOT_URLCONF = "type_event.urls"
@@ -124,7 +130,8 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = (os.path.join(BASE_DIR, 'templates/static'),)
-STATIC_ROOT = os.path.join('static')
+STATIC_ROOT = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+#STATIC_ROOT = os.path.join('static')
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
